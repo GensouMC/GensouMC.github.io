@@ -20,14 +20,14 @@
 
 /* --- カラーパレットと基本設定 --- */
 :root {
-    --color-dark-navy: #1A2A3A; /* 暗い紺 - 背景メイン (夜の空の深み) */
-    --color-deep-purple: #3A1954; /* 暗い紫 - 背景アクセント (宵闇の幻想的な色) */
-    --color-main-navy: #2C3E50; /* メインの紺 */
-    --color-main-purple: #6A329F; /* メインの紫 */
-    --color-accent-purple: #8E44AD; /* アクセントの紫 (星の輝きや魔法の光) */
-    --color-light-text: #EAEAEA; /* 明るいテキスト色 */
-    --color-highlight: #FFF8E1; /* グロウストーンや星のような光る色 */
-    --color-button-hover: #A06EC7; /* ボタンホバー色 */
+    --color-dark-navy: #F9F9F9; /* 淡いオフホワイト - 背景メイン */
+    --color-deep-purple: #F0FDF8; /* ごく淡いパステル黄緑 - 背景アクセント */
+    --color-main-navy: #E0F4D7; /* パステル黄緑 */
+    --color-main-purple: #FDDDE6; /* パステル桜色 */
+    --color-accent-purple: #F2B8C6; /* 少し濃いパステル桜色 (アクセント) */
+    --color-light-text: #333333; /* 濃いテキスト色 */
+    --color-highlight: #4F853B; /* 少し濃い黄緑色 (ハイライト) */
+    --color-button-hover: #F2B8C6; /* ボタンホバー色 */
     --font-minecraft: 'MinecraftCustomFont', sans-serif; /* ここで定義したカスタムフォント名を使用 */
 }
 
@@ -55,8 +55,8 @@ body {
 .header {
     background-color: var(--color-main-navy);
     padding: 15px 0;
-    border-bottom: 2px solid var(--color-main-purple); /* みんなで建国サバイバルの境界線 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid var(--color-main-purple); /* 桜色の境界線 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky; /* スクロールしてもヘッダーを上部に固定 */
     top: 0;
     z-index: 1000; /* 他の要素より手前に表示 */
@@ -72,7 +72,7 @@ body {
     color: var(--color-highlight);
     font-size: 2.2em;
     margin: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* 文字に影をつけて立体感 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 文字に薄い影 */
     font-weight: normal; /* 太字解除 */
 }
 
@@ -114,17 +114,17 @@ body {
 /* ヒーローセクション (トップビジュアル) */
 .hero-section {
     /* hero-background.webpをimagesフォルダに配置し、サーバーの美しい夜景や建築物の画像を設定してください */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-background.webp') no-repeat center center/cover;
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('images/hero-background.webp') no-repeat center center/cover;
     height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--color-highlight);
+    color: var(--color-light-text);
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5), /* 内側影で奥行き */
-                0 10px 20px rgba(0, 0, 0, 0.5); /* 下に影 */
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1), /* 内側影で奥行き */
+                0 10px 20px rgba(0, 0, 0, 0.1); /* 下に影 */
 }
 
 .hero-content {
@@ -134,7 +134,7 @@ body {
 .hero-section h2 {
     font-size: 3.5em;
     margin-bottom: 10px;
-    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     font-weight: normal; /* 太字解除 */
 }
 
@@ -148,12 +148,12 @@ body {
 .server-tagline {
     font-size: 1.5em;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     font-weight: normal; /* 太字解除 */
 }
 
 .ip-address-box {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     border: 2px solid var(--color-main-purple);
     padding: 15px 25px;
     border-radius: 8px;
@@ -163,12 +163,12 @@ body {
     font-size: 1.4em;
     margin-bottom: 30px;
     /* accent-purpleのRGB値を直接指定してbox-shadowを作成 (光るエフェクト) */
-    box-shadow: 0 0 15px rgba(142, 68, 173, 0.5);
+    box-shadow: 0 0 15px rgba(242, 184, 198, 0.5);
     transition: box-shadow 0.3s ease-out;
 }
 
 .ip-address-box:hover {
-    box-shadow: 0 0 25px rgba(142, 68, 173, 0.8); /* ホバー時のより強い光 */
+    box-shadow: 0 0 25px rgba(242, 184, 198, 0.8); /* ホバー時のより強い光 */
 }
 
 #ip-address {
@@ -180,20 +180,20 @@ body {
 .btn {
     display: inline-block;
     background-color: var(--color-accent-purple);
-    color: var(--color-light-text);
+    color: var(--color-dark-text);
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 8px;
     font-size: 1.3em;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     font-weight: normal; /* 太字解除 */
 }
 
 .btn:hover {
     background-color: var(--color-button-hover);
     transform: translateY(-3px); /* 少し浮き上がる */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* 各セクション共通スタイル */
@@ -211,11 +211,11 @@ body {
     transform: translateY(0);
 }
 
-.section:nth-of-type(odd) { /* 奇数セクションの背景色 (夜の空の深み) */
+.section:nth-of-type(odd) { /* 奇数セクションの背景色 (淡いオフホワイト) */
     background-color: var(--color-dark-navy);
 }
 
-.section:nth-of-type(even) { /* 偶数セクションの背景色 (宵闇の幻想的な色) */
+.section:nth-of-type(even) { /* 偶数セクションの背景色 (ごく淡いパステル黄緑) */
     background-color: var(--color-deep-purple);
 }
 
@@ -225,7 +225,7 @@ body {
     margin-bottom: 50px;
     position: relative;
     display: inline-block; /* 擬似要素の位置調整用 */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     font-weight: normal; /* 太字解除 */
 }
 
@@ -264,9 +264,9 @@ body {
 .about-section img {
     max-width: 100%;
     height: auto;
-    border: 3px solid var(--color-main-purple); /* 枠線もみんなで建国サバイバルの色で */
+    border: 3px solid var(--color-main-purple); /* 枠線も桜色で */
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(142, 68, 173, 0.3); /* 光る影 */
+    box-shadow: 0 0 20px rgba(242, 184, 198, 0.3); /* 光る影 */
 }
 
 /* ルールセクション (個別のカード形式) */
@@ -278,7 +278,7 @@ body {
 }
 
 .rule-card {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid var(--color-main-purple);
     border-radius: 10px;
     padding: 25px;
@@ -287,13 +287,13 @@ body {
     flex-direction: column;
     align-items: flex-start;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-weight: normal;
 }
 
 .rule-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .rule-card .rule-icon {
@@ -321,7 +321,7 @@ body {
 
 /* 違反行為への対応・免責事項のカードは少し異なる色にしても良いかも */
 .rule-card.rule-consequences {
-    background-color: rgba(58, 25, 84, 0.5);
+    background-color: rgba(242, 184, 198, 0.5);
     border-color: var(--color-accent-purple);
 }
 
@@ -337,11 +337,11 @@ body {
 }
 
 .join-method-card {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid var(--color-accent-purple);
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     display: flex;
     flex-direction: column;
@@ -351,7 +351,7 @@ body {
 
 .join-method-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .join-method-card h3 {
@@ -361,7 +361,7 @@ body {
     margin-bottom: 25px;
     text-align: center;
     font-weight: normal;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .join-method-card .join-steps {
@@ -423,10 +423,10 @@ body {
 .join-method-card.join-method-note {
     grid-column: 1 / -1; /* グリッドの全幅を占める */
     text-align: center;
-    background-color: rgba(58, 25, 84, 0.6);
+    background-color: rgba(242, 184, 198, 0.6);
     border-color: var(--color-highlight);
     padding: 40px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     height: auto; /* 高さはコンテンツに合わせる */
     display: block; /* Flexboxではなくブロック要素として扱う */
 }
@@ -445,13 +445,13 @@ body {
 
 /* --- 参加方法ページの注意書きスタイル --- */
 .important-note-box {
-    background-color: rgba(142, 68, 173, 0.2); /* アクセントカラーの薄い背景 */
+    background-color: rgba(242, 184, 198, 0.2); /* アクセントカラーの薄い背景 */
     border: 1px solid var(--color-accent-purple);
     border-radius: 8px;
     padding: 20px 30px;
     margin-bottom: 40px; /* 下の参加方法カードとの間隔 */
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-size: 1.1em;
     line-height: 1.8;
 }
@@ -490,12 +490,12 @@ body {
 
 /* --- プラグイン使い方ページ (plugins.html用) --- */
 .plugin-section {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid var(--color-accent-purple);
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 40px; /* 各セクション間のスペース */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
@@ -506,7 +506,7 @@ body {
     margin-bottom: 20px;
     text-align: center;
     font-weight: normal;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .plugin-section p {
@@ -542,12 +542,12 @@ body {
 
 /* --- 利用規約ページ (terms.html用) --- */
 .terms-content {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid var(--color-accent-purple);
     border-radius: 12px;
     padding: 40px;
     margin-top: 40px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     text-align: left; /* テキストを左寄せに */
 }
 
@@ -556,7 +556,7 @@ body {
     color: var(--color-highlight);
     margin-top: 30px;
     margin-bottom: 15px;
-    border-bottom: 1px dashed rgba(var(--color-main-purple), 0.5); /* 見出しの下に破線 */
+    border-bottom: 1px dashed rgba(242, 184, 198, 0.5); /* 見出しの下に破線 */
     padding-bottom: 5px;
     font-weight: normal;
 }
@@ -611,7 +611,7 @@ body {
 }
 
 .link-card {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     border: 1px solid var(--color-main-purple);
     border-radius: 8px;
     padding: 30px;
@@ -626,14 +626,14 @@ body {
 
 .link-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .link-card img {
     width: 80px;
     height: 80px;
     margin-bottom: 15px;
-    filter: drop-shadow(0 0 8px rgba(142, 68, 173, 0.5));
+    filter: drop-shadow(0 0 8px rgba(242, 184, 198, 0.5));
 }
 
 .link-card h3 {
@@ -657,7 +657,7 @@ body {
     text-align: center;
     font-size: 0.9em;
     border-top: 2px solid var(--color-main-purple);
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     font-family: 'Shippori Mincho', serif; /* 明朝体フォントを適用 */
     font-weight: 400; /* 通常の太さ (400) を指定 */
 }
