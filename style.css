@@ -646,6 +646,8 @@ body {
 /* Line オープンチャットの文字サイズを少し小さくする */
 .link-grid a[href*="openchat"] h3 {
     font-size: 1.4em;
+    color: var(--color-highlight); /* 文字色を桜色に */
+    text-shadow: none; /* text-shadowを削除 */
 }
 
 .link-card p {
