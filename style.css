@@ -791,6 +791,11 @@ body {
         max-width: 300px;
     }
 
+    /* 新しいオープンチャットカードを追加 */
+    .link-grid a[href="your-openchat-link"] {
+        /* 特定のカードにスタイルを適用したい場合はここに記述 */
+    }
+    
     .terms-content {
         padding: 25px;
     }
