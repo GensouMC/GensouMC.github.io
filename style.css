@@ -643,6 +643,11 @@ body {
     font-weight: normal;
 }
 
+/* Line オープンチャットの文字サイズを少し小さくする */
+.link-grid a[href*="openchat"] h3 {
+    font-size: 1.4em;
+}
+
 .link-card p {
     font-size: 0.95em;
     color: var(--color-light-text);
@@ -792,8 +797,8 @@ body {
     }
 
     /* 新しいオープンチャットカードを追加 */
-    .link-grid a[href="your-openchat-link"] {
-        /* 特定のカードにスタイルを適用したい場合はここに記述 */
+    .link-grid a[href*="openchat"] h3 {
+        font-size: 1.2em; /* レスポンシブ時にもサイズを調整 */
     }
     
     .terms-content {
