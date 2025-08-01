@@ -643,11 +643,13 @@ body {
     font-weight: normal;
 }
 
-/* Line オープンチャットの文字サイズをさらに小さくする */
+/* Line オープンチャットの文字サイズと横幅を調整 */
 .link-grid a[href*="openchat"] h3 {
-    font-size: 1.0em; /* 以前の1.2emから変更 */
-    color: var(--color-highlight); /* 文字色を桜色に */
-    text-shadow: none; /* text-shadowを削除 */
+    font-size: 1.2em; /* 元のサイズに戻す */
+    width: 80px; /* 文字の横幅を固定して2行に収まるようにする */
+    text-align: center; /* 中央寄せ */
+    color: var(--color-highlight);
+    text-shadow: none;
 }
 
 .link-card p {
@@ -735,7 +737,7 @@ body {
     }
 
     .rule-grid, .join-method-grid {
-        grid-template-columns: 1fr; /* 既に1frなので変更なし */
+        grid-template-columns: 1fr;
     }
 
     .join-steps li {
@@ -798,9 +800,11 @@ body {
         max-width: 300px;
     }
 
-    /* 新しいオープンチャットカードを追加 */
+    /* Line オープンチャットの文字サイズと横幅を調整 */
     .link-grid a[href*="openchat"] h3 {
-        font-size: 0.8em; /* 以前の1emから変更 */
+        font-size: 1em; /* 元のサイズに戻す */
+        width: 80px; /* 文字の横幅を固定して2行に収まるようにする */
+        text-align: center;
     }
     
     .terms-content {
