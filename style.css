@@ -495,7 +495,7 @@ body {
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 40px; /* 各セクション間のスペース */
-    box-shadow: 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
 
@@ -645,7 +645,7 @@ body {
 
 /* Line オープンチャットの文字サイズをさらに小さくする */
 .link-grid a[href*="openchat"] h3 {
-    font-size: 1.2em; /* 以前の1.4emから変更 */
+    font-size: 1.0em; /* 以前の1.2emから変更 */
     color: var(--color-highlight); /* 文字色を桜色に */
     text-shadow: none; /* text-shadowを削除 */
 }
@@ -800,7 +800,7 @@ body {
 
     /* 新しいオープンチャットカードを追加 */
     .link-grid a[href*="openchat"] h3 {
-        font-size: 1em; /* 以前の1.2emから変更 */
+        font-size: 0.8em; /* 以前の1emから変更 */
     }
     
     .terms-content {
